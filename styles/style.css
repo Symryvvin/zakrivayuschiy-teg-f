@@ -13,6 +13,7 @@
   min-inline-size: 320px;
   min-block-size: 100dvb;
   font-family: var(--main-font), sans-serif;
+  font-variation-settings: 'wght' var(--card-text-font-weight);
   margin: 0 auto;
   background-image: var(--main-bg);
   background-size: cover;
@@ -69,6 +70,7 @@
   font-size: 18px;
   line-height: 1.21em;
   background-color: #fff;
+  font-variation-settings: 'wght' var(--card-title-font-weight);
 }
 
 .card__image-container {
@@ -151,7 +153,7 @@ button {
   background-color: #fff;
   border: none;
   padding: 0;
-  margin:0;
+  margin: 0;
   border: 2px solid black;
 }
 
@@ -176,7 +178,6 @@ button {
   align-items: center;
   justify-content: center;
   margin: 50px auto 100px;
-  border: 2px solid black;
   gap: 8px;
   padding: 15px 20px;
 }
@@ -206,7 +207,6 @@ button {
 
 .ok-button {
   display: block;
-  border: 2px solid black;
   height: 38px;
 }
 
