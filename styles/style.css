@@ -16,6 +16,7 @@
   margin: 0 auto;
   background-image: var(--main-bg);
   background-size: cover;
+  background-attachment: fixed;
 }
 
 .adaptive-width-container {
@@ -82,6 +83,8 @@
   block-size: 100%;
   max-block-size: 100%;
   object-fit: cover;
+
+  height: 700px;
 }
 
 .sepia-img-filter {
@@ -137,14 +140,28 @@
   line-height: 21px;
 }
 
-.card__like-button {
+.card__buttons {
   display: flex;
   gap: 12px;
-  border: none;
-  background: transparent;
   align-self: flex-end;
   align-items: center;
+}
+
+button {
+  background-color: #fff;
+  border: none;
   padding: 0;
+  margin:0;
+  border: 2px solid black;
+}
+
+.card__icon-button {
+  border: none;
+}
+
+.card__like-button {
+  width: 130px;
+  height: 38px;
 }
 
 .button__text {
@@ -152,15 +169,54 @@
   font-family: var(--accent-font), sans-serif;
   font-size: 14px;
   line-height: 0.9em;
+}
+
+.save-button {
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  margin: 50px auto 100px;
   border: 2px solid black;
-  width: 130px;
+  gap: 8px;
+  padding: 15px 20px;
+}
+
+.save-dialog[open] {
+  display: flex;
+  flex-direction: column;
+  gap: 30px;
+  border: 2px solid #000;
+  padding: 30px;
+}
+
+.save-dialog[open]::backdrop {
+  background-color: rgba(0, 0, 0, 0.75);
+}
+
+.save-dialog__alert-label {
+  display: flex;
+  gap: 20px;
+}
+
+.save-dialog__alert-text {
+  font-size: 14px;
+  line-height: 1.5em;
+  width: 234px;
+}
+
+.ok-button {
+  display: block;
+  border: 2px solid black;
   height: 38px;
-  align-content: center;
+}
+
+.uppercase-text {
+  text-transform: uppercase;
 }
 
 @supports (font-variation-settings: normal) {
   page {
-      font-weight: var(--card-text-font-weight);
+    font-weight: var(--card-text-font-weight);
   }
 
   .card__title {
