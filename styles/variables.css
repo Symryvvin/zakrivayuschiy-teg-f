@@ -2,6 +2,11 @@
 :root {
     --main-font: 'Inter-Variable';
     --accent-font: 'PressStart2P';
+    --main-bg: 
+        repeating-linear-gradient(to left, transparent, #d3d3d3 2px),
+        repeating-linear-gradient(to bottom, transparent, #d3d3d3 2px),
+        linear-gradient(to bottom, #e7e7e7, #1a1a1a);
     --card-title-font-weight: 700;
     --card-text-font-weight: 400;
+    --watermark-stroke-color: #fff;
 }

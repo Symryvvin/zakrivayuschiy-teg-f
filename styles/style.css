@@ -14,8 +14,8 @@
   min-block-size: 100dvb;
   font-family: var(--main-font), sans-serif;
   margin: 0 auto;
-  background-image: url(../images/bg-image.png), linear-gradient(to bottom, #E7E7E7, #1A1A1A);
-  background-size: 4px;
+  background-image: var(--main-bg);
+  background-size: cover;
 }
 
 .adaptive-width-container {
@@ -49,8 +49,133 @@
   text-transform: uppercase;
 }
 
+.cards {
+  display: flex;
+  flex-direction: column;
+  gap: 50px;
+}
+
+.card {
+  display: flex;
+  flex-direction: column;
+  background-color: #000;
+  border: 2px solid #000;
+  gap: 2px;
+}
+
+.card__title {
+  padding: 5px 10px;
+  font-size: 18px;
+  line-height: 1.21em;
+  background-color: #fff;
+}
+
+.card__image-container {
+  position: relative;
+
+}
+
+.card__image {
+  display: block;
+  inline-size: 100%;
+  max-inline-size: 100%;
+  block-size: 100%;
+  max-block-size: 100%;
+  object-fit: cover;
+}
+
+.sepia-img-filter {
+  filter: sepia(80%);
+}
+
+.invert-img-filter {
+  filter: invert(90%);
+}
+
+.contrast-img-filter {
+  filter: contrast(300%)
+}
+
+.shadow-img-filter {
+  filter: brightness(5) contrast(50%);;
+}
+
+.grayscale-img-filter {
+  filter: grayscale(90%);
+}
+
+.hue-rotate-img-filter {
+  filter: hue-rotate(90deg);
+}
+
+.blur-img-filter {
+  filter: blur(5px);
+}
+
+.card__image-label {
+  position: absolute;
+  top: 25px;
+  right: 25px;
+  font-family: var(--accent-font), sans-serif;
+  font-size: 14px;
+  mix-blend-mode: hard-light;
+  opacity: 50%;
+  -webkit-text-stroke: 1px var(--watermark-stroke-color);
+  text-shadow: 0 1px 1px var(--watermark-stroke-color);
+}
+
+.card__content {
+  display: flex;
+  flex-direction: column;
+  gap: 27px;
+  padding: 25px;
+  background-color: #fff;
+}
+
+.card__text {
+  font-size: 18px;
+  line-height: 21px;
+}
+
+.card__like-button {
+  display: flex;
+  gap: 12px;
+  border: none;
+  background: transparent;
+  align-self: flex-end;
+  align-items: center;
+  padding: 0;
+}
+
+.button__text {
+  display: inline;
+  font-family: var(--accent-font), sans-serif;
+  font-size: 14px;
+  line-height: 0.9em;
+  border: 2px solid black;
+  width: 130px;
+  height: 38px;
+  align-content: center;
+}
+
 @supports (font-variation-settings: normal) {
   page {
       font-weight: var(--card-text-font-weight);
   }
-} 
+
+  .card__title {
+    font-weight: var(--card-title-font-weight);
+  }
+}
+
+@supports (text-stroke: 1px var(--watermark-stroke-color)) {
+  .card__image-label {
+    text-stroke: 1px var(--watermark-stroke-color);
+  }
+}
+
+@media (width <= 375px) {
+  .adaptive-width-container {
+    inline-size: 100%;
+  }
+}
