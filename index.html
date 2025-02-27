@@ -14,31 +14,36 @@
     <link rel="apple-touch-icon" href="./images/favicon.png">
   </head>
   <body class="page">
-    <header class="header">
-      <div class="logo-group">
-        <h1>&lt;/HTML&gt;</h1>
-        <h2>закрывающий тег</h2>
+    <header class="header adaptive-width-container">
+      <div class="header__logo-group">
+        <h1 class="header__title">&lt;/HTML&gt;</h1>
+        <h2 class="header__title header__small-font">закрывающий тег</h2>
       </div>
     </header>
     <main>
-      <article class="card">
-        <h2 class="card__title">Фритрек и нулевой спринт: Подготовка к работе</h2>
-        <img class="card__image" src="./images/card-image.png"/>
-        <div class="card__content">
-          <p class="card__text">Это было самое начало пути. На этом этапе важно было проникнуться основами и настроиться на учёбу. И, возможно, подумать, как новые знания могут повлиять на ваше будущее.</p>
-          <p class="card_text">Место для ваших воспоминаний о начале обучения.</p>
-        </div>
-        <button class="card__icon-button">
-          <svg class="like-icon"></svg>
-        </button>
-        <button class="card__like-button button__text">Like</button>
-      </article>
+      <section class="cards adaptive-width-container">
+        <article class="card">
+          <h2 class="card__title">Фритрек и нулевой спринт: Подготовка к работе</h2>
+          <div class="card__image-container">
+            <img class="card__image" src="./images/card-image.png"/>
+            <span class="card__image-label">&lt;/HTML&gt;</span>
+          </div>
+          <div class="card__content">
+            <p class="card__text">Это было самое начало пути. На этом этапе важно было проникнуться основами и настроиться на учёбу. И, возможно, подумать, как новые знания могут повлиять на ваше будущее.</p>
+            <p class="card_text">Место для ваших воспоминаний о начале обучения.</p>
+          </div>
+          <button class="card__like-button"> <svg class="like-icon"></svg><span class="button__text">Like</span></button>
+        </article>
+      </section>
     </main>
     <footer class="footer">
       <div>
-        <svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 39 39" width="22" height="22">
-          <use href="../svg/icons.svg#floppy"></use>
-        </svg>
+        <button class="card__icon-button">
+          <svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 39 39" width="22" height="22">
+            <use href="../svg/icons.svg#floppy"></use>
+          </svg>
+          <span>Сохранить на память</span>
+        </button>
       </div>
     </footer>
     <script src="./scripts/like.js"></script>
