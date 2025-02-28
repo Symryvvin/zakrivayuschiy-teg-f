@@ -125,12 +125,6 @@
 .card__text {
   display: flex;
   flex-direction: column;
-  gap: 27px;
-}
-
-.card__text p {
-  display: flex;
-  flex-direction: column;
   font-size: 18px;
   line-height: 21px;
   gap: 27px;
