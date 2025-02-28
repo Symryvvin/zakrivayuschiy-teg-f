@@ -9,4 +9,8 @@
     --card-title-font-weight: 700;
     --card-text-font-weight: 400;
     --watermark-stroke-color: #fff;
+
+    --heart-main-color: #ff0000;
+    --heart-contour-color: #000;
+    --heart-core-color: #000;
 }
