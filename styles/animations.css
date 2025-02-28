@@ -66,7 +66,7 @@
     animation: heart-scale 0.3s ease-in 0.1s;
   }
 
-  .like-icon.is-liked .sparks{
+  .like-icon.is-liked .sparks {
     animation: heart-sparkles 0.3s ease-in 0.3s;
   }  
 
