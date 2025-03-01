@@ -57,7 +57,7 @@
 .card__title {
   padding: 5px 10px;
   font-size: 18px;
-  line-height: 1.21em;
+  line-height: 1.2em;
   background-color: #fff;
   font-variation-settings: 'wght' var(--card-title-font-weight);
 }
